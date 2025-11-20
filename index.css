@@ -1,0 +1,432 @@
+
+body {
+    background-color: #002f7b;
+}
+
+
+/* -------------------------------------------------------- */
+
+/*-----nav bar fixed--------------------------------------- */
+.header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;                             /* to make nav bar full width */
+    padding: 20px 10px 20px 10px;
+
+    display: flex;                          /* to align items horizontally */
+    justify-content: center;     
+
+    list-style-type: none;                
+    background-color: white;    
+    box-shadow:#ffffff 0px 0px 10px;
+    z-index:100;                           /* to keep nav bar on top of other elements */   
+    
+    transition: 0.5s;
+    animation:slideRight 1s ease forwards; /*name  duration  timing-function */
+}
+
+.navbar a {
+    display:inline-block;
+
+    text-decoration:none;
+    font-size:25px;
+    color:#002f7b;
+    font-weight:bold;
+    margin-left:35px;
+}
+
+.navbar a:hover {
+    color:#cd0a6f;
+}
+
+@keyframes slideRight {
+    0% {
+        transport:translateX(-100px);           /* to move nav bar from left to right */
+        opacity:0;
+    }
+    100% {
+        transport:translateX(0);
+        opacity:1;
+    }
+}
+
+/*-----nav bar fixed ends------------------------------------- */
+
+/* ----index.html starts-------------------------------------- */
+.index-container {
+    margin-top: 300px;
+    color:#afeb8f;
+    font-size: 80px;
+    text-align: center;
+    text-shadow: #fcfaff 2px 2px 4px;  /* to give shadow to text */
+    font-weight: bold;
+}
+
+/* -----index.html ends---------------------------------------- */
+
+
+/*---home.html starts------------------------------------------ */
+/* main-container starts--------------------------------------- */
+.main-container{
+    display: flex;                  /* to align items horizontally */
+    gap: 400px;                     /* to give space between image and text */  
+    margin-top:250px;               /* to give space from top */
+    margin-left:200px;              /* to give space from left */
+}
+
+.text-group {
+    display:flex;
+    flex-direction: column;
+    margin-top:100px;
+}
+.text-group p{
+    font-size: 50px;
+    margin: 5px 0;                 
+    text-shadow:2px 2px 4px #ffffff;
+}
+.text-group .name {
+    font-size: 50px;
+    color: #fcfaff;
+}
+.text-group .role {
+    background-color: #fcfaff;
+    border-radius:10px;
+    box-shadow:#ffffff 0px 0px 10px;
+}
+
+.role p {
+    padding: 5px 15px 5px 50px;      /* padding: top right bottom left */
+    font-size: 30px;
+    color: #002f7b;
+    text-shadow: 2px 2px 4px #afeb8f;
+}
+.role p:hover {
+    color: #d7618a;
+}
+
+.main-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px 50px;       /*top-left  bottom-right */
+    border: 2px solid #ffffff; 
+    box-shadow: #ffffff 0px 0px 10px;   
+}
+
+
+/* ----main-container ends---------------------------------------- */
+/* ----home.html ends--------------------------------------------- */
+
+/* about.html starts --------------------------------------------- */
+
+.about-page {
+    background-color: #afeb8f;
+}
+
+.about-container h3 {
+    margin-top: 150px;                /* to give space from top */
+    margin-left:50px;                /* to give space from left */   
+
+    font-size: 50px;                 /* to increase font size */
+    color: #002f7b;
+    text-shadow: #002f7b 1px 1px 20px;
+}
+
+.about-item {
+    margin: 100px 100px 30px 100px; 
+    padding: 20px 30px 20px 55px;
+    background-color: rgba(248, 245, 247, 0.3);
+
+    border-radius: 20px;  
+    border: 2px solid rgb(248, 245, 247);  
+    box-shadow:#002f7b 0px 0px 10px;
+         
+    font-family: 'Arial';
+    font-weight:50;
+    font-size: 30px;   
+    font-weight:normal;
+    color:#002f7b;                       
+    line-height: 1.6;   
+}
+
+.about-item :hover {
+    transform:scale(1.02);
+}  
+
+/* about.html ends ----------------------------------------------------- */
+
+
+/*education.html starts ------------------------------------------------ */
+
+.education-container h3 {
+    margin-top: 150px;                /* to give space from top */
+    margin-left:50px;                /* to give space from left */   
+
+    font-size: 40px;                 /* to increase font size */
+    color: #ffffff;
+    text-shadow: #ffffff 1px 1px 20px;
+}
+
+.education-grade{
+    display: flex;                      /* to align items horizontally */
+    gap: 100px;                         /* to give space between image and text */  
+
+    margin:100px 200px 100px 200px;
+    padding: 20px 100px 20px 100px;     /* padding: top right bottom left */
+
+    border-radius: 20px;
+    border:2px solid darkgrey;        /* width style color*/
+    box-shadow:#ffffff 0px 0px 10px;
+
+    background-color: rgba(248, 245, 247, 0.3);
+    font-family: 'Arial';
+}
+
+.education-grade:hover{
+    transform: scale(1.1);               /* to increase size on hover */
+}
+
+.grade {
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.education-details {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.6; 
+}
+
+.education-details li {
+    list-style-type: none;
+}
+
+/*education.html ends --------------------------------------------------- */
+
+/* skills.html starts --------------------------------------------------- */
+.skill-container h3{
+    margin-top: 150px;                  
+    margin-left:50px;        
+
+    font-size: 50px;                    
+    color: #ffffff;
+    text-shadow: #ffffff 1px 1px 20px;
+}
+
+.skills-list {
+    margin: 50px 300px 30px 300px;     
+    padding: 30px 20px 30px 30px; 
+
+    border-radius: 20px;      
+    border: 2px solid darkgrey; 
+    box-shadow: #ffffff 0px 0px 10px;  
+
+}
+
+.skills-list ul {
+    display:flex;
+    gap:40px;
+    flex-wrap: wrap;                    /* to move items to next line if not enough space */
+
+    list-style-type: none;              /* to remove default bullets */             
+}
+
+.skills-list li {
+    background-color: rgba(248, 245, 247, 0.3);
+    padding: 20px 20px 20px 20px;
+
+    color:#ffffff;
+    font-family: 'Arial';
+    font-size: 25px;
+    text-align:center;
+
+    border-radius: 20px;      
+    border: 2px solid darkgrey;  
+    box-shadow: #ffffff 0px 0px 10px; 
+}
+
+.skills-list li:hover {
+    transform: scale(1.2);               /* to increase size on hover */
+}
+/* skills.html ends ------------------------------------------------------- */
+
+
+/*experience.html starts -------------------------------------------------- */
+.experience-page {
+    background-color: #afeb8f;
+}
+.experience-container {
+    margin-top: 150px;                   /* to give space from top */
+    margin-left:50px;                   /* to give space from left */          
+    font-size: 50px;                    /* to increase font size */
+    color: #002f7b;
+    text-shadow: #002f7b 1px 1px 20px;
+}
+
+.experience-item {
+    margin: 100px 100px 110px 100px; 
+    background-color: rgba(248, 245, 247, 0.3);
+
+    border-radius: 20px;
+    border: 2px solid rgb(248, 245, 247);   /* width style color*/
+    box-shadow: #002f7b 0px 0px 10px;
+}
+
+.experience-item:hover {
+    transform: scale(1.1);               /* to increase size on hover */
+}
+
+.experience-item-header{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px 50px 0px 50px;    
+    
+    color: rgba(12, 12, 14, 0.9);
+    font-size:20px;
+    font-weight: normal;
+}
+
+.experience-item-data {
+    padding:1px 30px 20px 55px;
+
+    font-family: 'Arial';
+    font-weight:50;
+    text-shadow: #d9cfd3 1px 1px 2px;
+    font-size: 30px;   
+    font-weight:normal;
+    color:#002f7b; 
+                         
+    line-height: 1.6;          
+}
+
+/*expeience.html ends------------------------------------------------------ */
+
+/* project.html starts ---------------------------------------------------- */
+.project-container h2{  
+    margin-top: 150px;                   /* to give space from top */
+    margin-left:50px;                   /* to give space from left */          
+    font-size: 50px;                    /* to increase font size */
+    color: #ffffff;
+}
+
+.project-item {
+    margin-top: 70px;              
+    margin-left:200px;              
+    margin-right:200px;  
+
+    font-size: 30px;                
+    color: #ffffff;              
+    line-height: 1.6;           
+}   
+
+.card {
+    margin:40px 20px 90px 20px;
+    background-color: rgba(248, 245, 247, 0.3);
+    padding: 20px 30px 20px 30px;
+
+    font-family: 'Arial';
+    font-size:25px;
+
+    border-radius: 20px;
+    border: 2px solid darkgrey;        /* width style color*/
+    box-shadow: #ffffff 0px 0px 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);               /* to increase size on hover */
+}
+
+/* project.html ends ------------------------------------------------------- */
+
+
+/* contact.html starts ----------------------------------------------------- */
+.contact-page {
+    background-color: #afeb8f;
+}
+
+h2{ 
+    margin-left: 20px;
+    margin-top: 150px;
+    color:#002f7b;
+    font-size: 80px;
+    text-shadow: #ffffff 1px 1px 20px;
+}
+/* footer starts----------------------------------------------------------- */
+footer {
+    display: flex;                          /* to align items horizontally */
+    justify-content: space-between;         /* to give space between left and right part */
+    align-items: center;                    /* to align items vertically center */
+
+    margin:50px 80px 50px 50px;
+    padding: 20px 20px 20px 20px;           /* padding inside the footer */  
+    position: fixed;                        /* to fix the footer at the bottom */
+    
+    font-size: 25px;
+    width: 80%;                             /* to make footer full width */   
+    box-sizing: border-box;                 /* to include padding in width calculation */
+}
+/* ---------------------------------------------- */
+footer .left-part {
+    padding: 10px 20px 10px 20px;           /* padding: top right bottom left */
+    color: #002f7b; 
+    text-shadow: #002f7b 0 0 12px;     
+}
+
+/* ---------------------------------------------- */
+
+footer .right-part {
+    padding: 10px 20px 10px 20px;
+    color: #002f7b;
+}
+
+footer .right-part a {
+    color: #002f7b;
+    margin-left: 40px;                      /*to give space between icons */
+    text-decoration: none;                  /* to remove underline from links */
+}
+
+footer .right-part a:hover {
+    color: #d7618a;
+}
+
+.right-part .links{
+    display: flex;                          /* to align icons horizontally */
+    align-items: center;                    /* to align icons vertically center */
+    margin-left: 20px;                      /* to give space from left */
+}
+
+.links img {
+    width: 40px;
+    height: 40px;
+    color:#0a0a0a;
+    border: 3px solid #131213; 
+    border-radius: 50%;
+    box-shadow: #0a0a0a 0px 0px 15px;
+}
+.links img:hover {
+    box-shadow: #d7618a 0px 0px 20px;
+}
+
+/* ---------------------------------------------- */
+.right-part .resume-link a {
+    background-color: #ffffff;
+    color: #002f7b;
+
+    margin:20px 20px 20px 20px;
+    padding: 10px 30px 10px 30px;           /* padding: top right bottom left */
+    border-radius: 5px;                     /* to make corners rounded */
+    border: 2px solid #ffffff;
+    box-shadow: #002f7b 0px 0px 20px;
+
+    font-size:25px;
+    display: inline-block;                  /* to apply padding and background color */
+    text-decoration: none;
+}
+.resume-link a:hover {
+    color: #d7618a;
+}
+
+/* ----footer ends--------------------------------------------------------- */
+/* ----contact.html ends--------------------------------------------------- */
+
